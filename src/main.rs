@@ -1,6 +1,5 @@
-struct World<'a> {
-    name : &'a str
-}
+extern crate hello;
+use hello::world::World;
 
 fn id<T>(x : &T) -> &T {
     return x;
@@ -11,3 +10,4 @@ fn main() {
     let y = id(&x);
     println!("Hello, {}!", y.name);
 }
+
